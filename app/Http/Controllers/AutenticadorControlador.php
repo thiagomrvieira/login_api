@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use App\Events\EventNovoRegistro;
+use Illuminate\Support\Str;
 
 class AutenticadorControlador extends Controller
 {
@@ -23,7 +24,7 @@ class AutenticadorControlador extends Controller
             'name'=> $request->name,
             'email'=> $request->email,
             'password'=> bcrypt($request->password),
-            'token' => str_random(60)
+            'token' => Str::random(40)
         ]); 
         
         $user->save();
