@@ -60,7 +60,7 @@ class AutenticadorControlador extends Controller
         //Acessa o usuário logado
         $user = $request->user();
         //armazena o token na variável
-        $token = $user->createToken('Token de acesso')->accessToken();
+        $token = $user->createToken('Token de acesso')->accessToken;
         //Retorna o token como response
         return response()->json([
             'token' => $token
