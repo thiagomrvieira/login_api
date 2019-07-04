@@ -76,4 +76,11 @@ class AutenticadorControlador extends Controller
             'res' => 'Deslogado com sucesso!'
         ]);
     }
+
+
+    public function ativarRegistro($id, $token){
+        
+    }
+
+
 }
